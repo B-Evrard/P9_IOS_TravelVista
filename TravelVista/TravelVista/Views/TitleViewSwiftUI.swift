@@ -9,9 +9,9 @@ import SwiftUI
 
 struct TitleViewSwiftUI: View {
     
-    var countryName: String
-    var capitalName: String
-    var rate: Int
+    let countryName: String
+    let capitalName: String
+    let rate: Int
     
     
     var body: some View {
@@ -24,19 +24,19 @@ struct TitleViewSwiftUI: View {
                 Text(capitalName)
                     .font(.system(size: 17))
                     .foregroundColor(Color(.darkGray))
-            }.padding()
+            }
             
             Spacer()
             
             HStack (spacing: 1) {
                 ForEach(0..<rate, id: \.self) { _ in
                     Image(systemName: "star.fill")
-                        .foregroundColor(.orange)
+                        .foregroundColor(.customSand)
                 }
             }.padding()
             
         }
-        .frame(width: 393, height: 65)
+        .padding()
        
     }
 }
