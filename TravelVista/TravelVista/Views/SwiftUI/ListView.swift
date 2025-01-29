@@ -19,7 +19,7 @@ struct ListView: View {
         NavigationStack {
             List {
                 ForEach(regions, id: \.name) { region in
-                    regionList(region: region)
+                    RegionList(region: region)
                 }
             }
             .background(Color.white)
@@ -34,7 +34,7 @@ struct ListView: View {
 }
 
 
-struct regionList: View {
+struct RegionList: View {
     
     var region: Region
     
@@ -51,7 +51,7 @@ struct regionList: View {
             ) {
                 
                 ForEach(region.countries, id: \.name) { country in
-                          countryView(country: country)
+                          CountryView(country: country)
                     
                  }
                 
@@ -65,41 +65,43 @@ struct regionList: View {
     
 }
 
-struct countryView: View {
+struct CountryView: View {
     
     var country: Country
     
     var body: some View {
         
-        HStack {
-            Image(country.pictureName)
-                .resizable()
-               .frame(width: 52, height: 52)
-               .clipShape(Circle())
-            
-            VStack(alignment: .leading) {
-                Text(country.name)
-                    .font(.system(size: 20))
-                    .foregroundColor(Color("CustomBlue"))
-                
-                Text(country.capital)
-                    .font(.system(size: 15))
-                    
-            }
-            
-            Spacer()
-            
+        NavigationLink(destination: DetailView()) {
             HStack {
-                Text("\(country.rate)")
-                    .font(.system(size: 17))
-                Image(systemName: "star.fill")
+                Image(country.pictureName)
                     .resizable()
-                    .frame(width: 32, height: 32)
-                    .foregroundColor(.customSand)
+                    .frame(width: 52, height: 52)
+                    .clipShape(Circle())
+                
+                VStack(alignment: .leading) {
+                    Text(country.name)
+                        .font(.system(size: 20))
+                        .foregroundColor(Color("CustomBlue"))
+                    
+                    Text(country.capital)
+                        .font(.system(size: 15))
+                    
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Text("\(country.rate)")
+                        .font(.system(size: 17))
+                    Image(systemName: "star.fill")
+                        .resizable()
+                        .frame(width: 32, height: 32)
+                        .foregroundColor(.customSand)
                     
                     
+                }
+                
             }
-            
         }
         
         
