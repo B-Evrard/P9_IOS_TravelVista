@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    var regions: [Region]
+    var viewModel = ListViewModel()
     
     var body: some View {
         
@@ -18,7 +18,7 @@ struct ListView: View {
         NavigationStack {
             Text("Liste de voyages")
             List {
-                ForEach(regions, id: \.name) { region in
+                ForEach(viewModel.regions, id: \.name) { region in
                     RegionList(region: region)
                 }
             }
@@ -96,5 +96,5 @@ struct CountryView: View {
 
 
 #Preview {
-    ListView(regions: Service().load("Source.json"))
+    ListView(viewModel: ListViewModel())
 }

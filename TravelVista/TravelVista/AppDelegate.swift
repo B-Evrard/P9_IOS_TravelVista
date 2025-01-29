@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let listView = ListView(regions: Service().load("Source.json"))
+        let listView = ListView(viewModel: ListViewModel())
         let hostingController = UIHostingController(rootView: listView)
         
         window?.rootViewController = hostingController
