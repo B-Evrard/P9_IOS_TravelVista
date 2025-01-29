@@ -13,9 +13,10 @@ struct ListView: View {
     
     var body: some View {
         
-        Text("Liste de voyages")
+        
         
         NavigationStack {
+            Text("Liste de voyages")
             List {
                 ForEach(regions, id: \.name) { region in
                     RegionList(region: region)
@@ -59,7 +60,7 @@ struct CountryView: View {
     
     var body: some View {
         
-        NavigationLink(destination: DetailView()) {
+        NavigationLink(destination: DetailView(country: country)) {
             HStack {
                 Image(country.pictureName)
                     .resizable()
