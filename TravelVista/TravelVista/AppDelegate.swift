@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let hostingController = UIHostingController(rootView: listView)
         
         window?.rootViewController = hostingController
+        window?.makeKeyAndVisible()
         return true
     }
 }
