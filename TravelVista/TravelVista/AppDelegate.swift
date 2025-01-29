@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let listView = ListView(viewModel: ListViewModel())
+        let listView = TravelListView(viewModel: TravelListViewModel())
         let hostingController = UIHostingController(rootView: listView)
         
         window?.rootViewController = hostingController

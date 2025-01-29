@@ -1,58 +1,11 @@
 //
-//  ListView.swift
+//  CountryView.swift
 //  TravelVista
 //
-//  Created by Bruno Evrard on 20/01/2025.
+//  Created by Bruno Evrard on 29/01/2025.
 //
 
 import SwiftUI
-
-struct ListView: View {
-    
-    var viewModel = ListViewModel()
-    
-    var body: some View {
-        
-        
-        
-        NavigationStack {
-            Text("Liste de voyages")
-            List {
-                ForEach(viewModel.regions, id: \.name) { region in
-                    RegionList(region: region)
-                }
-            }
-            .background(Color.white)
-            .listStyle(PlainListStyle())
-            .listRowSpacing(12)
-            
-        }
-        
-    }
-    
-}
-
-
-struct RegionList: View {
-    
-    var region: Region
-    
-    var body: some View {
-        
-        Section(header:
-                    HStack {
-            Text(region.name)
-                .font(.system(size: 15, weight: .medium))
-                .foregroundColor(.gray)
-            Spacer()
-        }){
-            ForEach(region.countries, id: \.name) { country in
-                CountryView(country: country)
-            }
-        }
-    }
-    
-}
 
 struct CountryView: View {
     
@@ -91,10 +44,4 @@ struct CountryView: View {
         }
     }
     
-}
-
-
-
-#Preview {
-    ListView(viewModel: ListViewModel())
 }

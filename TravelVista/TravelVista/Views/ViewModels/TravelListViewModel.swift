@@ -15,7 +15,7 @@
 
 import Foundation
 
-class ListViewModel: ObservableObject {
+class TravelListViewModel: ObservableObject {
     
     
     var regions: [Region] = Service().load("Source.json")
