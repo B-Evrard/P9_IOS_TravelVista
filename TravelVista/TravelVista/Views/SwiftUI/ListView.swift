@@ -13,9 +13,8 @@ struct ListView: View {
     
     var body: some View {
         
-        VStack {
-            Text("Liste de voyages")
-        }
+        Text("Liste de voyages")
+        
         NavigationStack {
             List {
                 ForEach(regions, id: \.name) { region in
@@ -28,7 +27,6 @@ struct ListView: View {
             
         }
         
-        
     }
     
 }
@@ -40,27 +38,17 @@ struct RegionList: View {
     
     var body: some View {
         
-        VStack {
-            Section(header:
-                HStack {
-                    Text(region.name)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(.gray)
-                    Spacer()
-                }
-            ) {
-                
-                ForEach(region.countries, id: \.name) { country in
-                          CountryView(country: country)
-                    
-                 }
-                
+        Section(header:
+                    HStack {
+            Text(region.name)
+                .font(.system(size: 15, weight: .medium))
+                .foregroundColor(.gray)
+            Spacer()
+        }){
+            ForEach(region.countries, id: \.name) { country in
+                CountryView(country: country)
             }
         }
-      
-        
-        
-        
     }
     
 }
@@ -85,7 +73,6 @@ struct CountryView: View {
                     
                     Text(country.capital)
                         .font(.system(size: 15))
-                    
                 }
                 
                 Spacer()
@@ -97,14 +84,10 @@ struct CountryView: View {
                         .resizable()
                         .frame(width: 32, height: 32)
                         .foregroundColor(.customSand)
-                    
-                    
                 }
                 
             }
         }
-        
-        
     }
     
 }
