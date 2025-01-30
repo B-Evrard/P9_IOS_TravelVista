@@ -11,12 +11,16 @@ import SwiftUI
 
 struct DetailView: UIViewControllerRepresentable {
     
+    let country: Country
+    
     func makeUIViewController(context: Context)  ->  DetailViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let detailView = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
-                                    
+             
+        detailView?.country = country
+        
         guard let detailViewController = detailView else {
             fatalError()
         }
