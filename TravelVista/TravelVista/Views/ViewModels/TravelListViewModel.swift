@@ -17,8 +17,11 @@ import Foundation
 
 class TravelListViewModel: ObservableObject {
     
+    var regions: [Region]
     
-    var regions: [Region] = Service().load("Source.json")
+    init() {
+        self.regions = Service().load("Source.json")
+    }
     
     
 }

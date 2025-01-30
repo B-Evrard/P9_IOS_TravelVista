@@ -19,7 +19,7 @@ struct TravelListView: View {
             Text("Liste de voyages")
             List {
                 ForEach(viewModel.regions, id: \.name) { region in
-                    RegionListView(region: region)
+                    RegionRowView(region: region)
                 }
             }
             .background(Color.white)

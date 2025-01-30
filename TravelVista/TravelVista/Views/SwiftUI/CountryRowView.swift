@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CountryView: View {
+struct CountryRowView: View {
     
     var country: Country
     
