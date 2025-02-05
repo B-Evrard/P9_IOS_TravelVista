@@ -37,6 +37,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FE3FD3972D4A29CA003E9974 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
 		FEA905802D40F9C700C3E6B8 /* SwiftUI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SwiftUI; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -54,6 +55,7 @@
 		424C31BE2B30956400279238 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE3FD3972D4A29CA003E9974 /* ViewModels */,
 				FEA905802D40F9C700C3E6B8 /* SwiftUI */,
 				424C31BC2B30955E00279238 /* DetailViewController.swift */,
 				42B90C162B2A055B00779364 /* ListViewController.swift */,
@@ -119,6 +121,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				FE3FD3972D4A29CA003E9974 /* ViewModels */,
 				FEA905802D40F9C700C3E6B8 /* SwiftUI */,
 			);
 			name = TravelVista;
