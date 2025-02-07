@@ -19,11 +19,11 @@ struct DetailView: UIViewControllerRepresentable {
         
         let detailView = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
              
-        detailView?.country = country
-        
         guard let detailViewController = detailView else {
             fatalError()
         }
+        
+        detailView?.country = country
         
         return detailViewController
         

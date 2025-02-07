@@ -12,9 +12,7 @@ struct TravelListView: View {
     var viewModel = TravelListViewModel()
     
     var body: some View {
-        
-        
-        
+    
         NavigationStack {
             Text("Liste de voyages")
             List {
